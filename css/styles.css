@@ -2,101 +2,195 @@
     --primary-text-color: #757575;
     --title-text-color: #212121;
     --accent-color: #2196F3;
-    --primary-bg-color: #F5F5F5;
+    --text-and-primary-bg-white-color: #FFFFFF;
     --second-bg-color: #2F303A;
-    --white-color: #FFFFFF;
+    --black-text-color-logo: #000000;
+    --buttons-and-bg-color:#F5F4FA;
 }
-/* білий rgba(255, 255, 255, 0.6) */
-/* bg-color footer hero: #2F303A; */
+
 
 body {
-    font-family: 'Roboto', sans-serif;
     color: var(--primary-text-color);
-    background-color: var(--primary-bg-color);
+    background-color: var(--text-and-primary-bg-white-color);
+    font-family: 'Roboto', sans-serif;
+}
+.list {
+    list-style: none;
 }
 
-.const {
-    background-color: #FFFFFF;
+/* ----------------------------------------шапка--------------- */
+
+.hat {
+    background-color: var(--text-and-primary-bg-white-color);
 }
 
 .logo {
+    color: var(--accent-color);
     font-family: 'Raleway', sans-serif;
     font-weight: 700; 
     font-size: 26px;
-    line-height: 1,1923;
+    line-height: 1.19;
     letter-spacing: 0.03em;
-    color: #000000;
     text-decoration: none;
 }
-.logo-accent {
-    color: var(--accent-color);
+.black-studio {
+    color: var(--black-text-color-logo);
 }  
 
-/* site nav */
+/*------------------------------------------ site nav ------------------*/
 
 .link {
+    color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
-    line-height: 1,1428;
+    line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
-    color: currentColor;
 } 
-
 .site-nav .link {
     color: var(--title-text-color);
 }
-.site-nav .link-primary,
+.site-nav .link.current,
 .link:hover,
 .link:focus {
     color: var(--accent-color);
 }
 
-/* секції та секції-заголовки */
+/* ----------------------------------------------------hero------------- */
 
 .hero {
     background-color: var(--second-bg-color);
-}
+    }
 .hero-title{
-    color: var(--white-color);
+    color: var(--text-and-primary-bg-white-color);
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-transform: uppercase;
 }
-/* не знаю чому не підключається і не спрацьовує клас */
+/*----------------------------------------------------кнопки--------------*/
 
-.button {
+.buttons {
     color: var(--title-text-color);
-    background: #F5F4FA;
+    background-color: var(--buttons-and-bg-color);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    text-align: center;
+    letter-spacing: 0.03em;
     border-radius: 4px;
     border: none;
+    cursor: pointer;
 }
-.button-primary {
-    color: var(--white-color);
+.button-accent {
+    color: var(--text-and-primary-bg-white-color);
     background-color: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
     border-radius: 4px;
     border: none;
+    cursor: pointer;
 }
-.button:hover,
-.button:focus {
-    color: var(--white-color);
+.buttons:hover,
+.buttons:focus {
+    color: var(--text-and-primary-bg-white-color);
     background-color: var(--accent-color);
 }
 
-.section {
+/* ------------------------------секції та заголовки-секцій-------*/
 
-}
-.list {
-    list-style: none;
-}
 .section-title {
     color: var(--title-text-color);
+    font-size: 36px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
 }
-.feature-list .title,
-.team-list .title {
+
+/* -------------------------------------------переваги------------- */
+/* .hidden {
+
+} */
+.excellence-title {
     color: var(--title-text-color);
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+.excellence-text {
+    color: var(--primary-text-color);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;    
+    letter-spacing: 0.03em;
+}
+/* ------------------------------------------команда--------------- */
+
+.team {
+    background-color: var(--buttons-and-bg-color);
+}
+.team-card {
+    background-color: var(--text-and-primary-bg-white-color);
+}
+.team-title {
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+.team-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+/* --------------------------------------------підлога------------- */
+
+.floor {
+    background-color: var(--second-bg-color);
+}
+.white-studio {
+    color: var(--text-and-primary-bg-white-color);
+}
+.contacts {
+    font-style: normal;
+}
+.contacts .link {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+.contacts .highlighter {
+    color: var(--text-and-primary-bg-white-color);
 }
 
 /* page portfolio.html */
 
+.portfolio-link { 
+    text-decoration: none;
+}
+.portfolio-title {
+    color: var(--title-text-color);
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+.portfolio-text {
+    color: var(--primary-text-color);
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+}
 
 
 
